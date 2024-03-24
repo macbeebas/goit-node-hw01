@@ -29,12 +29,24 @@ async function listContacts() {
   }
 }
 
-function getContactById(contactId) {
+async function getContactById(contactId) {
   // ...twój kod
   console.log(
     'function "getContactById" and value of param "contactId": ',
     contactId
   );
+  try {
+    const contacts = await fs.readFile(contactsPath);
+    const contact = JSON.parse(contacts.toString()).find(
+      (c) => c.id === contactId
+    );
+    if (contact) {
+      return console.table(contact);
+    }
+    return console.log(`I can't find contact with id:${contactId}`);
+  } catch (error) {
+    return console.error(error.message);
+  }
 }
 
 function removeContact(contactId) {
