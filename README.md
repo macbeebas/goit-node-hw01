@@ -1,30 +1,34 @@
-# GoIT [ PL - https://goit.global/pl/ | EN - https://goit.global/ph/ ]
-## Kurs (Course): Fullstack Developer
-## Moduł (Module): Node JS
-## Zadanie zaliczeniowe (Homework) - Moduł 1(Module 1): Podstawy Node.js. Tworzenie aplikacji konsolowych
-VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+# Kurs (Course) [GoIT](https://goit.global/pl/courses/fullstack/): Fullstack Developer
+# --- Node JS ---
+## Zadanie zaliczeniowe (Homework)<br>Sekcja 1 (Section 1):<br>- Podstawy Node.js. Tworzenie aplikacji konsolowych
+## Kroki (Tasks) <br>[ original link - [PL](https://textbook.edu.goit.global/lms-nodejs-homework/v1/pl/docs/hw-01/) | [EN](https://textbook.edu.goit.global/lms-nodejs-homework/v1/en/docs/hw-01/) ]
+|PL|EN|
+|--|--|
+|**Krok 1**|**Step 1​**|
+|- Zainicjalizuj npm w projekcie.<br>- W root projektu utwórz plik|- Initialize npm in the project<br>- In the root of the project, create a file `index.js`|
+|- Zainicjalizuj npm w projekcie.<br>- W root projektu utwórz plik `index.js`<br>- Ustaw pakiet [nodemon](https://www.npmjs.com/package/nodemon) jako zależność opracowywania (devDependencies).<br>- Do pliku `package.json` dodaj "skrypty" dla włączenia `index.js`<br>- Skrypt `start` który uruchamia `index.js` przy pomocy `node`<br>- Skrypt `start:dev` który uruchamia `index.js` przy pomocy `nodemon`|tut|
+<hr>
 
-## Kroki (Tasks) [ PL | EN ]
-vvvvvvvvvvvvv
+- - [ ] redux
+- - [ ] (for unchecked checkbox)
+- - [x] (for checked checkbox)
 
-## Polski (Polish) - https://textbook.edu.goit.global/lms-nodejs-homework/v1/pl/docs/hw-01/
+##
+
+## Polski (Polish) - 
 ----------------------------------------------------------------------------------------
 [Przejdź do głównej zawartości](https://textbook.edu.goit.global/lms-nodejs-homework/v1/pl/docs/hw-01/)
+<hr>
 
 ![](Aspose.Words.6f10933b-6dbe-4ce9-894f-c89fe57ead33.001.png)[](https://textbook.edu.goit.global/lms-nodejs-homework/v1/pl/)
 ### **Krok 1[​**](https://textbook.edu.goit.global/lms-nodejs-homework/v1/pl/docs/hw-01/#krok-1 "Bezpośredni link do nagłówka")**
-- Zainicjalizuj npm w projekcie.
-- W root projektu utwórz plik index.js
-- Ustaw pakiet [nodemon](https://www.npmjs.com/package/nodemon) jako zależność opracowywania (devDependencies).
-- Do pliku package.json dodaj "skrytpy" dla włączenia index.js
-- Skrypt start który uruchamia index.js przy pomocy node
-- Skrypt start:dev który uruchamia index.js przy pomocy nodemon
+- Zainicjalizuj npm w projekcie.<br>- W root projektu utwórz plik index.js<br>- Ustaw pakiet [nodemon](https://www.npmjs.com/package/nodemon) jako zależność opracowywania (devDependencies).<br>- Do pliku package.json dodaj "skrypty" dla włączenia index.js<br>- Skrypt start który uruchamia index.js przy pomocy node<br>- Skrypt start:dev który uruchamia index.js przy pomocy nodemon
 ### **Krok 2[​**](https://textbook.edu.goit.global/lms-nodejs-homework/v1/pl/docs/hw-01/#krok-2 "Bezpośredni link do nagłówka")**
-W root projektu utwórz plik db. Dla zapisywania kontaktów ściągnij i wykorzystaj plik [contacts.json](https://github.com/goitacademy/nodejs-homework/blob/master/homework-01/contacts.json), umieszczając go w folderze db.
+W root projektu utwórz katalog `db`. Dla zapisywania kontaktów ściągnij i wykorzystaj plik [contacts.json](https://github.com/goitacademy/nodejs-homework/blob/master/homework-01/contacts.json), umieszczając go w folderze `db`.
 
-W root projektu utwórz plik contacts.js.
+W root projektu utwórz plik `contacts.js`.
 
-Zaimportuj moduły fs i path do pracy z systemem plików. Utwórz zmienną contactsPath i zapisz w niej ścieżkę do pliku contacts.json. Do utworzenia ścieżki wykorzystaj metody modułu path. Dodaj funkcję do pracy ze zbiorem kontaktów. W funcjach wykorzystaj moduł fs oraz jego metody readFile() i writeFile(). Zrób eksport utworzonych funkcji przez module.exports.
+Zaimportuj moduły `fs` i `path` do pracy z systemem plików. Utwórz zmienną `contactsPath` i zapisz w niej ścieżkę do pliku `contacts.json`. Do utworzenia ścieżki wykorzystaj metody modułu `path`. Dodaj funkcję do pracy ze zbiorem kontaktów. W funkcjach wykorzystaj moduł `fs` oraz jego metody `readFile()` i `writeFile()`. Zrób eksport utworzonych funkcji przez `module.exports`.
 
 contacts.js
 
