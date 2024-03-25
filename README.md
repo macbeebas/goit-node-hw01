@@ -1,12 +1,12 @@
-# Kurs (Course) [GoIT](https://goit.global/pl/courses/fullstack/): Fullstack Developer
-# --- Node JS ---
+# Kurs [GoIT](https://goit.global/pl/courses/fullstack/): Fullstack Developer<br>(Course site in [English](https://goit.global/ph/courses/fullstack/))
+# >>> Node JS <<<
 ## Zadanie zaliczeniowe (Homework)<br>Sekcja 1 (Section 1):<br>- Podstawy Node.js. Tworzenie aplikacji konsolowych
 ## Kroki (Tasks) <br>[ original link - [PL](https://textbook.edu.goit.global/lms-nodejs-homework/v1/pl/docs/hw-01/) | [EN](https://textbook.edu.goit.global/lms-nodejs-homework/v1/en/docs/hw-01/) ]
 |PL|EN|
 |--|--|
 |**Krok 1**|**Step 1​**|
 |- Zainicjalizuj npm w projekcie.<br>- W root projektu utwórz plik|- Initialize npm in the project<br>- In the root of the project, create a file `index.js`|
-|- Zainicjalizuj npm w projekcie.<br>- W root projektu utwórz plik `index.js`<br>- Ustaw pakiet [nodemon](https://www.npmjs.com/package/nodemon) jako zależność opracowywania (devDependencies).<br>- Do pliku `package.json` dodaj "skrypty" dla włączenia `index.js`<br>- Skrypt `start` który uruchamia `index.js` przy pomocy `node`<br>- Skrypt `start:dev` który uruchamia `index.js` przy pomocy `nodemon`|tut|
+|- Zainicjalizuj npm w projekcie.<br>- W root projektu utwórz plik `index.js`<br>- Ustaw pakiet [nodemon](https://www.npmjs.com/package/nodemon) jako zależność opracowywania (devDependencies).<br>- Do pliku `package.json` dodaj "skrypty" dla włączenia `index.js`<br>- Skrypt `start` który uruchamia `index.js` przy pomocy `node`<br>- Skrypt `start:dev` który uruchamia `index.js` przy pomocy `nodemon`|- Initialize npm in the project<br>- In the root of the project, create a file `index.js`|
 <hr>
 
 - - [ ] redux
