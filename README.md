@@ -1,13 +1,13 @@
-#GoIT [ PL - https://goit.global/pl/ | EN - https://goit.global/ph/ ]
-##Kurs (Course): Fullstack Developer
-##Moduł (Module): Node JS
-##Zadanie zaliczeniowe (Homework) - Moduł 1(Module 1): Podstawy Node.js. Tworzenie aplikacji konsolowych
+# GoIT [ PL - https://goit.global/pl/ | EN - https://goit.global/ph/ ]
+## Kurs (Course): Fullstack Developer
+## Moduł (Module): Node JS
+## Zadanie zaliczeniowe (Homework) - Moduł 1(Module 1): Podstawy Node.js. Tworzenie aplikacji konsolowych
 VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
 
-##Kroki (Tasks) [ PL | EN ]
+## Kroki (Tasks) [ PL | EN ]
 vvvvvvvvvvvvv
 
-##Polski (Polish) - https://textbook.edu.goit.global/lms-nodejs-homework/v1/pl/docs/hw-01/
+## Polski (Polish) - https://textbook.edu.goit.global/lms-nodejs-homework/v1/pl/docs/hw-01/
 ----------------------------------------------------------------------------------------
 [Przejdź do głównej zawartości](https://textbook.edu.goit.global/lms-nodejs-homework/v1/pl/docs/hw-01/)
 
@@ -162,7 +162,7 @@ Screenshoty wykonania poleceń można wysłać na dowolną, bezpłatną chmurę 
 
 ============================================================================================
 
-##English (Angielski) - https://textbook.edu.goit.global/lms-nodejs-homework/v1/en/docs/hw-01/
+## English (Angielski) - https://textbook.edu.goit.global/lms-nodejs-homework/v1/en/docs/hw-01/
 --------------------------------------------------------------------------------------------
 [Skip to main content](https://textbook.edu.goit.global/lms-nodejs-homework/v1/en/docs/hw-01/)
 
