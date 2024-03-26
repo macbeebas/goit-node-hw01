@@ -12,22 +12,31 @@ program.parse(process.argv);
 
 const argv = program.opts();
 
+function poo(iter) {
+  for (let i = 0; i < iter; i++) {
+    console.log();
+  }
+}
+
 // TODO: refaktor
 function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
-    case "list":
+    case "list": // DONE!
+      poo(1);
       console.log('Action "list"');
       contacts.listContacts();
       break;
 
-    case "get":
+    case "get": // DONE!
       // ... id
+      poo(1);
       console.log('Action "get" with param "id": ', id);
       contacts.getContactById(id);
       break;
 
     case "add":
       // ... name email phone
+      poo(1);
       console.log(
         'Action "add" with params "name email phone": ',
         name,
@@ -36,9 +45,14 @@ function invokeAction({ action, id, name, email, phone }) {
       );
       break;
 
-    case "remove":
+    case "remove": // DONE!
       // ... id
+      poo(1);
       console.log('Action "remove" with param "id": ', id);
+      contacts.removeContactById(id);
+      for (let i = 0; i < 2; i++) {
+        console.log();
+      }
       break;
 
     default:
