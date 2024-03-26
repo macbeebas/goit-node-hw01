@@ -1,16 +1,5 @@
-// contacts.js
+const { nanoid } = require("nanoid");
 
-// DONE - Zaimportuj moduły 'fs' i 'path' do pracy z systemem plików.
-// DONE - Utwórz zmienną 'contactsPath' i zapisz w niej ścieżkę do pliku 'contacts.json'.
-// DONE - Do utworzenia ścieżki wykorzystaj metody modułu 'path'.
-// - Dodaj funkcję do pracy ze zbiorem kontaktów.
-// - W funcjach wykorzystaj moduł 'fs' oraz jego metody 'readFile()' i 'writeFile()'.
-// DONE - Zrób eksport utworzonych funkcji przez 'module.exports'.
-
-/*
- * DONE - Skomentuj i zapisz wartość
- * const contactsPath = ;
- */
 function poo(iter) {
   for (let i = 0; i < iter; i++) {
     console.log();
@@ -30,51 +19,52 @@ function preventFile() {
     const orgFile = fsSync.readFileSync(contactsOrgPath);
     return fsSync.writeFileSync(contactsPath, orgFile, "utf-8");
   } catch (error) {
+    return console.log("ERROR 22:", error.message);
+  }
+}
+
+async function listContacts() {
+  // "node index.js --action list"
+  preventFile();
+  poo(1);
+  console.log("Function 'listContacts'");
+  try {
+    const contacts = await fs.readFile(contactsPath);
+    poo(1);
+    console.log("Table of Contacts");
+    return console.table(JSON.parse(contacts.toString()));
+  } catch (error) {
     return console.log("ERROR 37:", error.message);
   }
 }
 
-// TODO: udokumentuj każdą funkcję
-async function listContacts() {
-  // ...twój kod
-  preventFile();
-
-  console.log('function "listContacts"');
-  try {
-    const contacts = await fs.readFile(contactsPath);
-    return console.table(JSON.parse(contacts.toString()));
-  } catch (error) {
-    return console.log("ERROR 49:", error.message);
-  }
-}
-
 async function getContactById(contactId) {
-  // ...twój kod
+  // "node index.js --action get --id 05olLMgyVQdWRwgKfg5J6"
   preventFile();
-
-  console.log(
-    'function "getContactById" and value of param "contactId": ',
-    contactId
-  );
+  poo(1);
+  console.log("Function 'getContactById' with param 'contactId': ", contactId);
   try {
     const contacts = await fs.readFile(contactsPath);
     const contact = JSON.parse(contacts.toString()).find(
       (c) => c.id === contactId
     );
     if (contact) {
+      poo(1);
+      console.log("Contact found");
       return console.table(contact);
     }
     return console.log(`I can't find contact with id:${contactId}`);
   } catch (error) {
-    return console.error("ERROR 69:", error.message);
+    return console.error("ERROR 58:", error.message);
   }
 }
 
 async function removeContactById(contactId) {
-  // ...twój kod
+  // node index.js --action remove --id qdggE76Jtbfd9eWJHrssH
   preventFile();
+  poo(1);
   console.log(
-    'Function "removeContact" and value of param "contactId": ',
+    "Function 'removeContact' and value of param 'contactId': ",
     contactId
   );
   try {
@@ -82,6 +72,7 @@ async function removeContactById(contactId) {
     const parsedContacts = JSON.parse(contacts.toString());
     const indexOfContact = parsedContacts.findIndex((i) => i.id === contactId);
     if (indexOfContact > 0) {
+      poo(1);
       console.log("Table of Contacts");
       console.table(parsedContacts);
       const contactToRemove = parsedContacts.splice(indexOfContact, 1);
@@ -97,24 +88,56 @@ async function removeContactById(contactId) {
       try {
         await fs.writeFile(contactsPath, parsedContactsJSON);
       } catch (error) {
-        return console.log("ERROR 103:", error.message);
+        return console.log("ERROR 91:", error.message);
       }
       return;
     }
     return console.log(`I can't find contact with id: ${contactId}`);
   } catch (error) {
-    return console.log("ERROR 109:", error.message);
+    return console.log("ERROR 97:", error.message);
   }
 }
 
-function addContact(name, email, phone) {
-  // ...twój kod
+async function addContact(name, email, phone) {
+  // node index.js --action add --name Mango --email mango@gmail.com --phone 322-22-22
+  preventFile();
+  poo(1);
   console.log(
-    'function "addContact" and value of params "name", "email", "phone": ',
+    "Function 'addContact' and value of params 'name/email/phone': ",
     name,
+    "/",
     email,
+    "/",
     phone
   );
+
+  try {
+    const contacts = await fs.readFile(contactsPath);
+    const parsedContacts = JSON.parse(contacts.toString());
+    poo(1);
+    console.log("Table of Contacts before action 'add'");
+    console.table(parsedContacts);
+    const contactToAdd = {
+      id: nanoid(),
+      name: name,
+      email: email,
+      phone: phone,
+    };
+    poo(1);
+    console.log("Contact to add:", contactToAdd);
+    parsedContacts.push(contactToAdd);
+    poo(1);
+    console.log("Table of Contacts after adding the entry");
+    console.table(parsedContacts);
+    const parsedContactsJSON = JSON.stringify(parsedContacts, null, 2);
+    try {
+      await fs.writeFile(contactsPath, parsedContactsJSON);
+    } catch (error) {
+      return console.log("ERROR 136:", error.message);
+    }
+  } catch (error) {
+    return console.log("ERROR 139:", error.message);
+  }
 }
 
 module.exports = {
